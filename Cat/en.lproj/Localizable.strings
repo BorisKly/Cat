@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Cat
+
+  Created by Borys Klykavka on 11.01.2025.
+  
+*/
+
+"users" = "Users";
+"signUp" = "Sign Up";
+"hello" = "Hello";
+
+
