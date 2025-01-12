@@ -64,6 +64,7 @@ class NetworkService {
             completion(.failure(NetworkError.invalidUrl))
             return
         }
+        print(url)
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.allHTTPHeaderFields = headers ?? getHeader()

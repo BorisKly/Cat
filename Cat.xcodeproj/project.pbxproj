@@ -16,7 +16,7 @@
 		E4867C012D329735002F534E /* CatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C002D329735002F534E /* CatTests.swift */; };
 		E4867C0B2D329735002F534E /* CatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C0A2D329735002F534E /* CatUITests.swift */; };
 		E4867C0D2D329735002F534E /* CatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C0C2D329735002F534E /* CatUITestsLaunchTests.swift */; };
-		E4867C1D2D3299D0002F534E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C1C2D3299D0002F534E /* ViewController.swift */; };
+		E4867C1D2D3299D0002F534E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C1C2D3299D0002F534E /* MainTabBarController.swift */; };
 		E4867C212D329AAB002F534E /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C202D329AAB002F534E /* UsersListViewController.swift */; };
 		E4867C232D329AC9002F534E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C222D329AC9002F534E /* AuthViewController.swift */; };
 		E4867C262D329E54002F534E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4867C242D329E54002F534E /* Localizable.strings */; };
@@ -75,7 +75,7 @@
 		E4867C062D329735002F534E /* CatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4867C0A2D329735002F534E /* CatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUITests.swift; sourceTree = "<group>"; };
 		E4867C0C2D329735002F534E /* CatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E4867C1C2D3299D0002F534E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4867C1C2D3299D0002F534E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E4867C202D329AAB002F534E /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		E4867C222D329AC9002F534E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		E4867C252D329E54002F534E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				E4867C512D32D21E002F534E /* User */,
 				E4867C1F2D329A63002F534E /* Auth */,
 				E4867C1E2D329A53002F534E /* UsersList */,
-				E4867C1B2D329991002F534E /* MainTabView */,
+				E4867C1B2D329991002F534E /* MainTabBarView */,
 				E4867C1A2D3298A5002F534E /* App */,
 				E4867C192D329876002F534E /* Resources */,
 				E4867BF22D329735002F534E /* Assets.xcassets */,
@@ -227,12 +227,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		E4867C1B2D329991002F534E /* MainTabView */ = {
+		E4867C1B2D329991002F534E /* MainTabBarView */ = {
 			isa = PBXGroup;
 			children = (
-				E4867C1C2D3299D0002F534E /* ViewController.swift */,
+				E4867C1C2D3299D0002F534E /* MainTabBarController.swift */,
 			);
-			path = MainTabView;
+			path = MainTabBarView;
 			sourceTree = "<group>";
 		};
 		E4867C1E2D329A53002F534E /* UsersList */ = {
@@ -543,7 +543,7 @@
 				E4867C552D32D7D9002F534E /* UserTableViewCell.swift in Sources */,
 				E4867C2B2D329EC4002F534E /* String+.swift in Sources */,
 				E4867C2E2D329F36002F534E /* Constants.swift in Sources */,
-				E4867C1D2D3299D0002F534E /* ViewController.swift in Sources */,
+				E4867C1D2D3299D0002F534E /* MainTabBarController.swift in Sources */,
 				E4867C352D32AE31002F534E /* Font+.swift in Sources */,
 				E4867C462D32C0BA002F534E /* Fonts.swift in Sources */,
 				E4867C592D32DB36002F534E /* UsersResponseData.swift in Sources */,

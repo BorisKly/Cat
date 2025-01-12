@@ -11,6 +11,7 @@ import SnapKit
 class UsersListViewController: UIViewController{
     
     let viewModel = UsersListViewModel()
+    var activityIndicator = UIActivityIndicatorView()
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -18,11 +19,11 @@ class UsersListViewController: UIViewController{
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
         return tableView
     }()
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-        
+
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -33,7 +34,19 @@ class UsersListViewController: UIViewController{
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        view.backgroundColor = .cyan
+        setupActivityIndicator()
+    }
+    
+    private func setupActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .red
+        
+        view.addSubview(activityIndicator)
+
+        activityIndicator.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().inset(180)
+        }
     }
 }
 
@@ -55,4 +68,17 @@ extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
         print("Selected user: \(user.name)")
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let threshold = scrollView.contentSize.height - scrollView.frame.height
+        if (scrollView.contentOffset.y > threshold) && viewModel.nextPageAvailiable {
+            activityIndicator.startAnimating()
+            tableView.isScrollEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.viewModel.page += 1
+                self.viewModel.fetchUsers(page: self.viewModel.page)
+                self.activityIndicator.stopAnimating()
+                self.tableView.isScrollEnabled = true
+            }
+        }
+    }
 }

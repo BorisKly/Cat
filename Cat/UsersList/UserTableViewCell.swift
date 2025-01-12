@@ -78,7 +78,6 @@ class UserTableViewCell: UITableViewCell {
      }
     
     private func setProfileImage(from urlString: String) {
-        print(#function)
         guard let url = URL(string: urlString) else {
             print("wrong URL")
             return

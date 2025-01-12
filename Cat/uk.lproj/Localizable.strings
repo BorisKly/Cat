@@ -9,3 +9,6 @@
 "users" = "Користувачі";
 "signUp" = "Авторизуватись";
 "hello" = "Привіт";
+
+"workingWithGetRequest" = "Працюємо з GET запитами";
+"workingWithPostRequest" = "Працюємо з POST запитами";
