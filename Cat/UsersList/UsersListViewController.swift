@@ -26,6 +26,10 @@ class UsersListViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         
+        viewModel.reloadTableView = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -36,18 +40,18 @@ class UsersListViewController: UIViewController{
 extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.model.plugUsers.count
+        return viewModel.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let user = viewModel.model.plugUsers[indexPath.row]
+        let user = viewModel.users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as! UserTableViewCell
         cell.configure(with: user)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = viewModel.model.plugUsers[indexPath.row]
+        let user = viewModel.users[indexPath.row]
         print("Selected user: \(user.name)")
     }
     

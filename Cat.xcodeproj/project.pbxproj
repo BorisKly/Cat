@@ -33,6 +33,8 @@
 		E4867C5B2D32DB53002F534E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C5A2D32DB53002F534E /* UserData.swift */; };
 		E4867C5D2D32DB84002F534E /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C5C2D32DB84002F534E /* UsersListViewModel.swift */; };
 		E4867C5F2D32DF4A002F534E /* UsersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4867C5E2D32DF4A002F534E /* UsersListModel.swift */; };
+		E4DB091B2D33E25500DBB517 /* NetworkApiMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB091A2D33E25500DBB517 /* NetworkApiMethods.swift */; };
+		E4DB091D2D33E27700DBB517 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB091C2D33E27700DBB517 /* NetworkService.swift */; };
 		E9D64DA9D6FA250DA322515A /* Pods_Cat_CatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4E24E27112EB8205F2D1D3 /* Pods_Cat_CatUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		E4867C5A2D32DB53002F534E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		E4867C5C2D32DB84002F534E /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		E4867C5E2D32DF4A002F534E /* UsersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListModel.swift; sourceTree = "<group>"; };
+		E4DB091A2D33E25500DBB517 /* NetworkApiMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApiMethods.swift; sourceTree = "<group>"; };
+		E4DB091C2D33E27700DBB517 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F115315A2C9D2D4D40CE4C69 /* Pods-CatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatTests.debug.xcconfig"; path = "Target Support Files/Pods-CatTests/Pods-CatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +175,7 @@
 		E4867BE82D329734002F534E /* Cat */ = {
 			isa = PBXGroup;
 			children = (
+				E4DB09192D33E23A00DBB517 /* NetworkServices */,
 				E4867C2C2D329F26002F534E /* Constants */,
 				E4867C292D329EB0002F534E /* Extensions */,
 				E4867C512D32D21E002F534E /* User */,
@@ -276,6 +281,15 @@
 				E4867C5A2D32DB53002F534E /* UserData.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		E4DB09192D33E23A00DBB517 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB091A2D33E25500DBB517 /* NetworkApiMethods.swift */,
+				E4DB091C2D33E27700DBB517 /* NetworkService.swift */,
+			);
+			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,7 +548,9 @@
 				E4867C462D32C0BA002F534E /* Fonts.swift in Sources */,
 				E4867C592D32DB36002F534E /* UsersResponseData.swift in Sources */,
 				E4867C5D2D32DB84002F534E /* UsersListViewModel.swift in Sources */,
+				E4DB091D2D33E27700DBB517 /* NetworkService.swift in Sources */,
 				E4867C502D32D075002F534E /* Button+.swift in Sources */,
+				E4DB091B2D33E25500DBB517 /* NetworkApiMethods.swift in Sources */,
 				E4867BEC2D329734002F534E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
